@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Range Slider</title>
+  <style>
+    .slider-container {
+      margin: 20px;
+      text-align: center;
+    }
+
+    .slider {
+      width: 80%;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <label for="rangeSlider">Adjust the value:</label>
+    <input id="rangeSlider" class="slider" type="range" min="0" max="100" value="50" step="1" oninput="updateValue(this.value)">
+    <p>Value: <span id="sliderValue">50</span></p>
+  </div>
+
+  <script>
+    function updateValue(value) {
+      document.getElementById('sliderValue').textContent = value;
+    }
+  </script>
+</body>
+</html>
